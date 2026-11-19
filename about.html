@@ -199,28 +199,18 @@ footer span {
     font-size: 9px;
   }
 }
-</style>
-<style>
-/* ALMUBTARIZ — MAROON & COKSU THEME */
-:root{--maroon:#481c2b;--maroon2:#682d40;--coksu:#b98d72;--coksu-light:#e4c7ae;--cream:#f7eee5;--ink:#2c171d;--gold:#d8b77b;--muted:#cdb9ad;--panel:rgba(255,239,225,.075)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:radial-gradient(ellipse at 15% 15%,#7b4050 0,transparent 38%),linear-gradient(135deg,#32131f,#512333 55%,#2c151d)!important;color:var(--cream)!important;font-family:Montserrat,Arial,sans-serif!important;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 85% 80%,#c49a7822,transparent 30%)}
-nav,.navbar,body>header:not(.hero){background:rgba(48,19,29,.88)!important;border:1px solid #e4c7ae35!important;box-shadow:0 12px 40px #16090d55!important;backdrop-filter:blur(16px)}nav{position:sticky!important;top:0;z-index:1000;padding:17px 5%!important;display:flex;align-items:center;justify-content:space-between;gap:18px}nav a,.navbar a{color:var(--cream)!important;text-decoration:none!important;transition:.25s}nav a:hover,.navbar a:hover{color:var(--gold)!important}.logo{color:var(--gold)!important;font-family:Cinzel,Georgia,serif!important;font-weight:800;letter-spacing:3px;font-size:22px;text-decoration:none!important}.menu,.nav-links{display:flex;align-items:center;gap:clamp(10px,2vw,25px);flex-wrap:wrap}.menu a,.nav-links a{font-size:12px;font-weight:600;letter-spacing:.4px}
-.hero{min-height:68vh!important;padding:110px 22px 75px!important;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#421827aa,#8d5c4b33)!important;border-bottom:1px solid #e4c7ae30;position:relative}.hero h1,.hero h2,h1,h2,.section-title{font-family:Cinzel,Georgia,serif!important;color:var(--coksu-light)!important}.hero h1{font-size:clamp(42px,8vw,92px)!important;letter-spacing:3px;text-shadow:0 8px 35px #1a080d}.hero h2{letter-spacing:4px}.eyebrow,.label,.section-label,.section-title,.date{color:var(--gold)!important;letter-spacing:3px}.subtitle,.description,.desc,.note,p{color:#e3d2c7!important;line-height:1.9}.line{background:linear-gradient(90deg,transparent,var(--gold),transparent)!important}.glass,.glass-card,.card,.feature,.value,.time-box,.contact-grid>div,.stat,.video-feature,.video-info{background:linear-gradient(145deg,#9b725d2b,#2b111b99)!important;border:1px solid #e4c7ae45!important;border-radius:18px!important;box-shadow:0 14px 35px #18090e44!important;color:var(--cream)!important;backdrop-filter:blur(12px)}.container,.section,.content{color:var(--cream)!important}.section{padding:75px 7%!important}.section h2,.section-title{font-size:clamp(25px,4vw,36px)!important}.btn,.button{border-radius:999px!important;padding:13px 24px!important;font-weight:700!important;letter-spacing:1px!important;text-decoration:none!important;transition:.25s}.primary,.btn.primary{background:var(--coksu-light)!important;color:var(--ink)!important;border:1px solid var(--coksu-light)!important}.secondary,.btn.secondary{background:transparent!important;color:var(--cream)!important;border:1px solid var(--gold)!important}.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #16090d66}.cards,.grid,.values,.contact-grid{gap:22px!important}.feature,.card{padding:26px!important}.symbol,.icon{color:var(--gold)!important}.filters button,.nav-btn,.back{background:#6b3545!important;color:var(--cream)!important;border:1px solid #d8b77b66!important;border-radius:30px!important;padding:9px 16px!important}.item{border:1px solid #e4c7ae44!important;border-radius:12px!important;overflow:hidden}.caption{background:#32131fe8!important;color:var(--cream)!important}.lightbox{background:#170a0fef!important}.video-frame{border:1px solid #d8b77b55!important;border-radius:18px!important;overflow:hidden}footer{background:#241018!important;color:#cdb9ad!important;border-top:1px solid #d8b77b44!important;padding:28px!important;text-align:center}
-@media(max-width:760px){nav,.navbar{padding:14px 18px!important;flex-wrap:wrap}.menu,.nav-links{width:100%;justify-content:center;gap:12px}.menu a,.nav-links a{font-size:11px}.hero{min-height:58vh!important;padding:85px 18px 55px!important}.cards,.grid,.values,.contact-grid{grid-template-columns:1fr!important}.section{padding:55px 6%!important}}
+
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.site-nav .site-menu{display:flex;align-items:center;justify-content:flex-end;gap:14px;flex-wrap:wrap}
+.site-nav .site-menu a{margin:0;white-space:nowrap}
+@media(max-width:760px){.site-nav{align-items:flex-start}.site-nav .site-menu{justify-content:flex-start;gap:10px}.site-nav .site-menu a{font-size:10px}}
 
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">PG 620</div>
-  <div>
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="gallery.html">GALLERY</a>
-  </div>
-</nav>
+<nav class="site-nav"><a class="logo" href="index.html">ALMUBTARIZ</a><div class="site-menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="committee.html">Committee</a><a href="countdown.html">Countdown</a><a href="gallery.html">Gallery</a><a href="video.html">Video</a><a href="contact.html">Contact</a></div></nav>
 
 <header class="hero">
   <div class="label">GET TO KNOW US</div>
