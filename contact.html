@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | PG 620</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #070b18;
+  color: #f5f1e8;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  border-bottom: 1px solid #b68b3533;
+  background: #0b1020cc;
+  backdrop-filter: blur(15px);
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  color: #d8b45a;
+  font-size: 21px;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: #c9c5b9;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.hero {
+  text-align: center;
+  padding: 85px 20px 45px;
+}
+
+.subtitle {
+  color: #c6a354;
+  letter-spacing: 5px;
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(32px, 7vw, 52px);
+  color: #e5c574;
+  font-weight: 500;
+}
+
+.hero p {
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.line {
+  width: 70px;
+  height: 2px;
+  background: #c6a354;
+  margin: 25px auto;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 7% 80px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  padding: 28px 20px;
+  border-radius: 18px;
+  border: 1px solid #c6a35444;
+  background: linear-gradient(145deg, #ffffff12, #ffffff04);
+  text-align: center;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #d8b45a;
+}
+
+.symbol {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #e5c574;
+  font-family: 'Cinzel', serif;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #999;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #10101a;
+  background: linear-gradient(135deg, #e7ca79, #aa8137);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.note {
+  text-align: center;
+  margin-top: 45px;
+  padding: 25px;
+  border: 1px solid #c6a35433;
+  border-radius: 18px;
+  background: #ffffff08;
+}
+
+.note h2 {
+  font-family: 'Cinzel', serif;
+  color: #d8b45a;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.note p {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+footer {
+  border-top: 1px solid #c6a35433;
+  text-align: center;
+  padding: 25px;
+  color: #777;
+  font-size: 11px;
+}
+
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.site-nav .site-menu{display:flex;align-items:center;justify-content:flex-end;gap:14px;flex-wrap:wrap}
+.site-nav .site-menu a{margin:0;white-space:nowrap}
+@media(max-width:760px){.site-nav{align-items:flex-start}.site-nav .site-menu{justify-content:flex-start;gap:10px}.site-nav .site-menu a{font-size:10px}}
+
+</style>
+</head>
+
+<body>
+
+<nav class="site-nav"><a class="logo" href="index.html">ALMUBTARIZ</a><div class="site-menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="committee.html">Committee</a><a href="countdown.html">Countdown</a><a href="gallery.html">Gallery</a><a href="video.html">Video</a><a href="contact.html">Contact</a></div></nav>
+
+<header class="hero">
+  <div class="subtitle">STAY CONNECTED WITH US</div>
+  <h1>Get In Touch</h1>
+  <div class="line"></div>
+  <p>Terhubung dengan keluarga besar Panggung Gembira 620.</p>
+</header>
+
+<main class="container">
+
+  <div class="contact-grid">
+
+    <div class="card">
+      <div class="symbol">◎</div>
+      <h3>Instagram</h3>
+      <p>Ikuti perjalanan dan informasi terbaru PG 620.</p>
+      <a class="btn" href="https://instagram.com/" target="_blank">
+        Visit Instagram
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="symbol">✉</div>
+      <h3>Email</h3>
+      <p>Untuk pertanyaan dan keperluan resmi acara.</p>
+      <a class="btn" href="mailto:emailpanitia@example.com">
+        Send Email
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="symbol">⌖</div>
+      <h3>Location</h3>
+      <p>Pondok Pesantren Modern Mafazah.</p>
+      <a class="btn" href="https://maps.google.com/" target="_blank">
+        Open Maps
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="symbol">☎</div>
+      <h3>WhatsApp</h3>
+      <p>Hubungi panitia untuk informasi lebih lanjut.</p>
+      <a class="btn" href="https://wa.me/62" target="_blank">
+        Contact Committee
+      </a>
+    </div>
+
+  </div>
+
+  <div class="note">
+    <h2>One Stage, One Story</h2>
+    <p>
+      Panggung Gembira 620 bukan sekadar pertunjukan.
+      Ini adalah cerita, perjuangan, kreativitas,
+      dan kenangan yang dibangun bersama.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 PANGGUNG GEMBIRA 620
+  <br><br>
+  Pondok Pesantren Modern Mafazah
+</footer>
+
+</body>
+</html>

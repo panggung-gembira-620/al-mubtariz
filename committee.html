@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Committee | PG 620</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #070b18;
+  color: #f5f1e8;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  background: #b68b35;
+  filter: blur(150px);
+  opacity: .13;
+  top: 10%;
+  left: -100px;
+  z-index: -1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  border-bottom: 1px solid #b68b3533;
+  background: #0b1020cc;
+  backdrop-filter: blur(15px);
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  color: #d8b45a;
+  font-size: 21px;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: #c9c5b9;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.hero {
+  text-align: center;
+  padding: 85px 20px 45px;
+}
+
+.subtitle {
+  color: #c6a354;
+  letter-spacing: 5px;
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(30px, 7vw, 52px);
+  color: #e5c574;
+  font-weight: 500;
+}
+
+.hero p {
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.line {
+  width: 70px;
+  height: 2px;
+  background: #c6a354;
+  margin: 25px auto;
+}
+
+.section {
+  padding: 25px 7% 70px;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  color: #d8b45a;
+  font-size: 21px;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff12, #ffffff04);
+  border: 1px solid #c6a35444;
+  border-radius: 18px;
+  padding: 25px 18px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #d8b45a;
+}
+
+.photo {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  border: 2px solid #c6a354;
+  background: linear-gradient(135deg, #222b42, #111827);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d8b45a;
+  font-family: 'Cinzel', serif;
+  font-size: 30px;
+}
+
+.role {
+  color: #c6a354;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.desc {
+  color: #888;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+footer {
+  border-top: 1px solid #c6a35433;
+  text-align: center;
+  padding: 25px;
+  color: #777;
+  font-size: 11px;
+}
+
+@media(max-width:500px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .card {
+    padding: 20px 10px;
+  }
+  .photo {
+    width: 80px;
+    height: 80px;
+  }
+  .name {
+    font-size: 13px;
+  }
+}
+
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.site-nav .site-menu{display:flex;align-items:center;justify-content:flex-end;gap:14px;flex-wrap:wrap}
+.site-nav .site-menu a{margin:0;white-space:nowrap}
+@media(max-width:760px){.site-nav{align-items:flex-start}.site-nav .site-menu{justify-content:flex-start;gap:10px}.site-nav .site-menu a{font-size:10px}}
+
+</style>
+</head>
+
+<body>
+
+<nav class="site-nav"><a class="logo" href="index.html">ALMUBTARIZ</a><div class="site-menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="committee.html">Committee</a><a href="countdown.html">Countdown</a><a href="gallery.html">Gallery</a><a href="video.html">Video</a><a href="contact.html">Contact</a></div></nav>
+
+<header class="hero">
+  <div class="subtitle">BEHIND THE GREAT PERFORMANCE</div>
+  <h1>Our Committee</h1>
+  <div class="line"></div>
+  <p>Orang-orang di balik terselenggaranya Panggung Gembira 620.</p>
+</header>
+
+<section class="section">
+
+  <h2 class="section-title">Leadership</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="photo">01</div>
+      <div class="role">Ketua Pelaksana</div>
+      <div class="name">Nama Ketua</div>
+      <div class="desc">Pimpinan pelaksana acara</div>
+    </div>
+
+    <div class="card">
+      <div class="photo">02</div>
+      <div class="role">Wakil Ketua</div>
+      <div class="name">Nama Wakil</div>
+      <div class="desc">Mendampingi ketua pelaksana</div>
+    </div>
+
+    <div class="card">
+      <div class="photo">03</div>
+      <div class="role">Sekretaris</div>
+      <div class="name">Nama Sekretaris</div>
+      <div class="desc">Administrasi dan dokumentasi</div>
+    </div>
+
+    <div class="card">
+      <div class="photo">04</div>
+      <div class="role">Bendahara</div>
+      <div class="name">Nama Bendahara</div>
+      <div class="desc">Pengelolaan keuangan</div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+  <h2 class="section-title">Creative Team</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="photo">05</div>
+      <div class="role">Acara</div>
+      <div class="name">Nama Koordinator</div>
+      <div class="desc">Konsep dan susunan acara</div>
+    </div>
+
+    <div class="card">
+      <div class="photo">06</div>
+      <div class="role">Dekorasi</div>
+      <div class="name">Nama Koordinator</div>
+      <div class="desc">Visual dan tata panggung</div>
+    </div>
+
+    <div class="card">
+      <div class="photo">07</div>
+      <div class="role">Multimedia</div>
+      <div class="name">Nama Koordinator</div>
+      <div class="desc">Audio, visual dan dokumentasi</div>
+    </div>
+
+    <div class="card">
+      <div class="photo">08</div>
+      <div class="role">Perlengkapan</div>
+      <div class="name">Nama Koordinator</div>
+      <div class="desc">Kebutuhan teknis acara</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 PANGGUNG GEMBIRA 620
+  <br><br>
+  Pondok Pesantren Modern Mafazah
+</footer>
+
+</body>
+</html>

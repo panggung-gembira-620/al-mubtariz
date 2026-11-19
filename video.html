@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d19">
+<title>Video | PG 620</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #d9b66f;
+  --light: #f4dfa9;
+  --navy: #080d19;
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 20%, #26365355, transparent 35%),
+    var(--navy);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 15px;
+  left: 5%;
+  width: 90%;
+  padding: 17px 22px;
+  background: #ffffff0d;
+  border: 1px solid #ffffff20;
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 21px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 10px;
+  margin-left: 12px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+header {
+  padding: 155px 20px 65px;
+  text-align: center;
+}
+
+.label {
+  color: var(--gold);
+  letter-spacing: 6px;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(40px, 8vw, 75px);
+  color: var(--light);
+}
+
+header p {
+  color: #aeb5c3;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.line {
+  width: 100px;
+  height: 1px;
+  background: var(--gold);
+  margin: 25px auto;
+}
+
+.container {
+  width: 88%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.video-feature {
+  background: #ffffff0b;
+  border: 1px solid #d9b66f44;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 35px;
+  backdrop-filter: blur(20px);
+}
+
+.video-frame {
+  position: relative;
+  background: #000;
+  aspect-ratio: 16/9;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-info {
+  padding: 25px;
+}
+
+.video-info h2 {
+  color: var(--light);
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.video-info p {
+  color: #aeb5c3;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  color: var(--light);
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff09;
+  border: 1px solid #ffffff18;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card .video-frame {
+  aspect-ratio: 16/9;
+}
+
+.card iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.card h3 {
+  padding: 17px;
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  color: var(--light);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 15px;
+  margin-top: 70px;
+  border-top: 1px solid #ffffff15;
+  color: #777f8d;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+footer span {
+  color: var(--gold);
+}
+
+@media(max-width:650px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    font-size: 8px;
+    margin-left: 7px;
+  }
+
+  .video-info h2 {
+    font-size: 18px;
+  }
+}
+
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.site-nav .site-menu{display:flex;align-items:center;justify-content:flex-end;gap:14px;flex-wrap:wrap}
+.site-nav .site-menu a{margin:0;white-space:nowrap}
+@media(max-width:760px){.site-nav{align-items:flex-start}.site-nav .site-menu{justify-content:flex-start;gap:10px}.site-nav .site-menu a{font-size:10px}}
+
+</style>
+</head>
+
+<body>
+
+<nav class="site-nav"><a class="logo" href="index.html">ALMUBTARIZ</a><div class="site-menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="committee.html">Committee</a><a href="countdown.html">Countdown</a><a href="gallery.html">Gallery</a><a href="video.html">Video</a><a href="contact.html">Contact</a></div></nav>
+
+<header>
+  <div class="label">CINEMATIC DOCUMENTATION</div>
+  <h1>OUR VIDEOS</h1>
+  <div class="line"></div>
+  <p>Every Frame Holds A Memory.</p>
+</header>
+
+<main class="container">
+
+  <section class="video-feature">
+
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4"
+        title="Featured Video"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="video-info">
+      <h2>PG 620 — Featured Film</h2>
+      <p>
+        Sebuah dokumentasi perjalanan, kreativitas,
+        dan cerita di balik Panggung Gembira 620.
+        Video utama akan diperbarui dengan dokumentasi resmi.
+      </p>
+    </div>
+
+  </section>
+
+  <h2 class="section-title">More Stories</h2>
+
+  <section class="grid">
+
+    <div class="card">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4"
+          title="Behind the Scenes"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <h3>Behind The Scenes</h3>
+    </div>
+
+    <div class="card">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4"
+          title="Event Highlights"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <h3>Event Highlights</h3>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2026 <span>PANGGUNG GEMBIRA 620</span>
+  <p style="margin-top:10px">PONDOK PESANTREN MODERN MAFAZAH</p>
+</footer>
+
+</body>
+</html>
