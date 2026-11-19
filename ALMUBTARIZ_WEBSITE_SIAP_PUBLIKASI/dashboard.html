@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Admin | ALMUBTARIZ</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080d1b;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  padding: 22px;
+  background: #151b2c;
+  border-bottom: 1px solid #c6a35444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  color: #e5c574;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+.logout {
+  color: #e5c574;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.container {
+  padding: 35px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.welcome {
+  margin-bottom: 30px;
+}
+
+.welcome h1 {
+  font-family: 'Cinzel', serif;
+  color: #e5c574;
+  font-size: 26px;
+}
+
+.welcome p {
+  color: #929bad;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.stat {
+  background: #171d2e;
+  border: 1px solid #ffffff15;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.stat span {
+  color: #9ca4b5;
+  font-size: 11px;
+}
+
+.stat h2 {
+  color: #e5c574;
+  font-size: 27px;
+  margin-top: 10px;
+}
+
+.section-title {
+  color: #e5c574;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 18px;
+  font-size: 19px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(145deg, #1b2235, #111727);
+  border: 1px solid #ffffff18;
+  border-radius: 15px;
+  padding: 25px 18px;
+  transition: .3s;
+}
+
+.menu a:hover {
+  border-color: #d8b45a;
+  transform: translateY(-4px);
+}
+
+.menu .icon {
+  color: #e5c574;
+  font-size: 27px;
+  margin-bottom: 13px;
+}
+
+.menu h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.menu p {
+  color: #9ca4b5;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+footer {
+  text-align: center;
+  color: #687184;
+  font-size: 10px;
+  padding: 35px 15px;
+}
+
+@media(max-width: 500px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">PG 620</div>
+  <a href="index.html" class="logout">LOGOUT ↗</a>
+</header>
+
+<main class="container">
+
+  <div class="welcome">
+    <h1>Admin Dashboard</h1>
+    <p>Selamat datang di pusat pengelolaan Panggung Gembira 620.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <span>Total Menu</span>
+      <h2>06</h2>
+    </div>
+
+    <div class="stat">
+      <span>Status Website</span>
+      <h2>ON</h2>
+    </div>
+
+    <div class="stat">
+      <span>Admin</span>
+      <h2>01</h2>
+    </div>
+  </div>
+
+  <h2 class="section-title">Website Management</h2>
+
+  <div class="menu">
+
+    <a href="gallery.html">
+      <div class="icon">▧</div>
+      <h3>Kelola Gallery</h3>
+      <p>Kelola dokumentasi foto kegiatan PG 620.</p>
+    </a>
+
+    <a href="committee.html">
+      <div class="icon">◷</div>
+      <h3>Kelola Schedule</h3>
+      <p>Atur susunan dan jadwal acara.</p>
+    </a>
+
+    <a href="video.html">
+      <div class="icon">▷</div>
+      <h3>Kelola Video</h3>
+      <p>Atur video dokumentasi dan promosi.</p>
+    </a>
+
+    <a href="about.html">
+      <div class="icon">✧</div>
+      <h3>Informasi Acara</h3>
+      <p>Informasi dan cerita Panggung Gembira.</p>
+    </a>
+
+    <a href="committee.html">
+      <div class="icon">♙</div>
+      <h3>Data Panitia</h3>
+      <p>Informasi struktur kepanitiaan.</p>
+    </a>
+
+    <a href="index.html">
+      <div class="icon">⌂</div>
+      <h3>Lihat Website</h3>
+      <p>Buka halaman utama PG 620.</p>
+    </a>
+
+  </div>
+
+</main>
+
+<footer>
+  © 2026 PANGGUNG GEMBIRA 620
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d19">
+<title>Gallery | PG 620</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #d9b66f;
+  --light: #f4dfa9;
+  --navy: #080d19;
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 20%, #26365355, transparent 35%),
+    var(--navy);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 15px;
+  left: 5%;
+  width: 90%;
+  padding: 17px 22px;
+  background: #ffffff0d;
+  border: 1px solid #ffffff20;
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 21px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 11px;
+  margin-left: 15px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+header {
+  text-align: center;
+  padding: 150px 20px 55px;
+}
+
+.label {
+  color: var(--gold);
+  letter-spacing: 6px;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(40px, 8vw, 75px);
+  color: var(--light);
+}
+
+header p {
+  color: #aeb5c3;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.line {
+  width: 100px;
+  height: 1px;
+  background: var(--gold);
+  margin: 25px auto;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 15px 40px;
+}
+
+.filters button {
+  background: #ffffff09;
+  color: #ddd;
+  border: 1px solid #ffffff20;
+  padding: 11px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: linear-gradient(135deg,#f0d99e,#b58b43);
+  color: #101522;
+  border-color: transparent;
+}
+
+.gallery {
+  width: 88%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ffffff20;
+  border-radius: 15px;
+  background: #ffffff0a;
+  cursor: pointer;
+  aspect-ratio: 4/3;
+  animation: appear .6s ease;
+}
+
+.item.hide {
+  display: none;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.item:hover img {
+  transform: scale(1.08);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 15px 15px;
+  background: linear-gradient(transparent,#000d);
+  color: white;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.94);
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #d9b66f88;
+  background: #ffffff15;
+  color: var(--gold);
+  font-size: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+footer {
+  text-align: center;
+  padding: 40px 15px;
+  margin-top: 70px;
+  border-top: 1px solid #ffffff15;
+  color: #777f8d;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+footer span { color: var(--gold); }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width:700px) {
+  .gallery {
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 9px;
+    margin-left: 8px;
+  }
+}
+
+@media(max-width:380px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.site-nav .site-menu{display:flex;align-items:center;justify-content:flex-end;gap:14px;flex-wrap:wrap}
+.site-nav .site-menu a{margin:0;white-space:nowrap}
+@media(max-width:760px){.site-nav{align-items:flex-start}.site-nav .site-menu{justify-content:flex-start;gap:10px}.site-nav .site-menu a{font-size:10px}}
+
+</style>
+</head>
+
+<body>
+
+<nav class="site-nav"><a class="logo" href="index.html">ALMUBTARIZ</a><div class="site-menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="committee.html">Committee</a><a href="countdown.html">Countdown</a><a href="gallery.html">Gallery</a><a href="video.html">Video</a><a href="contact.html">Contact</a></div></nav>
+
+<header>
+  <div class="label">MEMORIES & MOMENTS</div>
+  <h1>OUR GALLERY</h1>
+  <div class="line"></div>
+  <p>Every Picture Has A Story To Tell.</p>
+</header>
+
+<div class="filters">
+  <button class="active" data-filter="all">ALL</button>
+  <button data-filter="preparation">PREPARATION</button>
+  <button data-filter="performance">PERFORMANCE</button>
+  <button data-filter="moments">MOMENTS</button>
+</div>
+
+<main class="gallery" id="gallery">
+
+  <div class="item" data-category="preparation">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Preparation">
+    <div class="caption">Preparation</div>
+  </div>
+
+  <div class="item" data-category="performance">
+    <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800" alt="Performance">
+    <div class="caption">Performance</div>
+  </div>
+
+  <div class="item" data-category="moments">
+    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800" alt="Moments">
+    <div class="caption">Special Moments</div>
+  </div>
+
+  <div class="item" data-category="preparation">
+    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800" alt="Preparation">
+    <div class="caption">Behind The Scene</div>
+  </div>
+
+  <div class="item" data-category="performance">
+    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800" alt="Stage">
+    <div class="caption">On The Stage</div>
+  </div>
+
+  <div class="item" data-category="moments">
+    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800" alt="Together">
+    <div class="caption">Togetherness</div>
+  </div>
+
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="close" id="close">×</button>
+  <button class="nav-btn prev" id="prev">‹</button>
+  <img id="lightbox-img" src="" alt="Gallery preview">
+  <button class="nav-btn next" id="next">›</button>
+</div>
+
+<footer>
+  © 2026 <span>PANGGUNG GEMBIRA 620</span>
+  <p style="margin-top:10px">PONDOK PESANTREN MODERN MAFAZAH</p>
+</footer>
+
+<script>
+const items = [...document.querySelectorAll('.item')];
+const buttons = document.querySelectorAll('.filters button');
+const lightbox = document.getElementById('lightbox');
+const preview = document.getElementById('lightbox-img');
+
+let current = 0;
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('active'));
+    button.classList.add('active');
+
+    const filter = button.dataset.filter;
+
+    items.forEach(item => {
+      item.classList.toggle(
+        'hide',
+        filter !== 'all' && item.dataset.category !== filter
+      );
+    });
+  });
+});
+
+function visibleItems() {
+  return items.filter(item => !item.classList.contains('hide'));
+}
+
+function openImage(item) {
+  current = visibleItems().indexOf(item);
+  showImage();
+  lightbox.classList.add('show');
+}
+
+function showImage() {
+  const visible = visibleItems();
+  if (!visible.length) return;
+
+  current = (current + visible.length) % visible.length;
+  preview.src = visible[current].querySelector('img').src;
+}
+
+items.forEach(item => {
+  item.addEventListener('click', () => openImage(item));
+});
+
+document.getElementById('next').onclick = () => {
+  current++;
+  showImage();
+};
+
+document.getElementById('prev').onclick = () => {
+  current--;
+  showImage();
+};
+
+document.getElementById('close').onclick = () => {
+  lightbox.classList.remove('show');
+};
+
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove('show');
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (!lightbox.classList.contains('show')) return;
+
+  if (e.key === 'Escape') lightbox.classList.remove('show');
+  if (e.key === 'ArrowRight') {
+    current++;
+    showImage();
+  }
+  if (e.key === 'ArrowLeft') {
+    current--;
+    showImage();
+  }
+});
+</script>
+
+</body>
+</html>
